@@ -1,17 +1,19 @@
 import './Adduser.css'
 import { useState } from 'react'
 
+const users = []
+
 
 const Adduser = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         
-        users.push({name: username, age: age
+        users.push({id: Math.random(), name: username, age: age
 
         })
-        console.log(user.name)
+        
     }
-    const users = []
+
     const[username, setUsername] = useState('')
     const[age, setAge] = useState('')
 
@@ -35,8 +37,8 @@ const Adduser = () => {
             </form>
         </div>
         <div>{users.map((user) => { 
-            console.log(user.name, user.age)
-            return ( <div key={Math.random()} className='useritem'>
+            console.log(users)
+            return ( <div className='useritem'>
                 <p>username:{user.name}</p>
                 <p>age: {user.age} </p>
             </div>)
