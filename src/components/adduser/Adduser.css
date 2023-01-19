@@ -1,0 +1,46 @@
+.form-container {
+    width: 40rem;
+    height: 20rem;
+    max-width: 90%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: whitesmoke;
+    color: black;
+   
+    box-shadow: 0 2px 12px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    
+    
+}
+
+
+
+.form-container label {
+   font-size: 16px;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+.form-container input {
+  height: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid darkgrey;
+}
+
+.btn {
+    background-color: rgb(158, 96, 158);
+    margin-top: 3rem;
+    position: relative;
+    width: auto;
+    font-weight: bold;
+    color: black;
+    height: 2rem;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: antiquewhite;
+}
