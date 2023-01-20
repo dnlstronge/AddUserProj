@@ -13,8 +13,9 @@ const Adduser = (props) => {
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
-        console.log(age, username)
-
+        if (username.length > 0 && age > 0) {
+            console.log(age, username)
+        }
     }
     const handleUsername = (e) => {
         setUsername(e.target.value)
