@@ -16,6 +16,9 @@ const Adduser = (props) => {
         if (username.length > 0 && age > 0) {
             console.log(age, username)
         }
+        else {
+            alert("Error: invalid data submitted")
+        }
     }
     const handleUsername = (e) => {
         setUsername(e.target.value)
