@@ -13,6 +13,7 @@ const Adduser = (props) => {
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
+        console.log(age, username)
 
     }
     const handleUsername = (e) => {
