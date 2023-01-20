@@ -4,14 +4,22 @@ import Card from '../UI/Card'
 import classes from './Adduser.module.css'
 import Button from '../UI/Button'
 
-const users = []
+
 
 
 const Adduser = (props) => {
+    const [username, setUsername] = useState('')
+    const [age, setAge] = useState('')
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
 
+    }
+    const handleUsername = (e) => {
+        setUsername(e.target.value)
+    }
+    const handleAge = (e) => {
+        setAge(e.target.value)
     }
     
     
