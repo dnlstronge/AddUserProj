@@ -5,8 +5,9 @@ const Button = (props) => {
         <button 
         className={classes.button} 
         type={props.type || 'button'}
-        onClick={props.onclick}
-        >Add user</button>
+        onClick={props.onclick}>
+          {props.children}
+        </button>
     )
 }
 export default Button;
