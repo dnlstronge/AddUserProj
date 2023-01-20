@@ -19,6 +19,8 @@ const Adduser = (props) => {
         else {
             alert("Error: invalid data submitted")
         }
+        setUsername('');
+        setAge('');
     }
     const handleUsername = (e) => {
         setUsername(e.target.value)
@@ -32,9 +34,21 @@ const Adduser = (props) => {
         <Card className={classes.input}>
         <form onSubmit={handleOnSubmit}>
             <label>Username</label>
-            <input htmlFor="username" id="username" type="text" onChange={handleUsername}/>
+            <input 
+            htmlFor="username" 
+            id="username" 
+            type="text" 
+            onChange={handleUsername}
+            value={username}
+            />
             <label>Age (years)</label>
-            <input htmlFor="age" id="age" type="number" onChange={handleAge}/>
+            <input 
+            htmlFor="age" 
+            id="age" 
+            type="number" 
+            onChange={handleAge}
+            value={age}
+            />
             <Button type="submit">Add user</Button>
         </form>
         </Card>
