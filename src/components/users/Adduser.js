@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Card from '../UI/Card'
 import classes from './Adduser.module.css'
+import Button from '../UI/Button'
 
 const users = []
 
@@ -21,7 +22,7 @@ const Adduser = (props) => {
             <input htmlFor="username" id="username" type="text"/>
             <label>Age (years)</label>
             <input htmlFor="age" id="age" type="number"/>
-            <button type="submit">Add user</button>
+            <Button type="submit">Add user</Button>
         </form>
         </Card>
     )
