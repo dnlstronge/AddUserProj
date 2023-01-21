@@ -19,9 +19,11 @@ const Adduser = (props) => {
         if (+age < 1) {
             return;
         }
+        props.onAddUser(username, age)
         setUsername('');
         setAge('');
         console.log("Mon the gunners!")
+
     }
     const handleUsername = (e) => {
         setUsername(e.target.value)
