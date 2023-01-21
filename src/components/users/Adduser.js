@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Card from '../UI/Card'
 import classes from './Adduser.module.css'
 import Button from '../UI/Button'
+import ErrorModal from '../UI/ErrorModal'
 
 
 
@@ -34,7 +35,8 @@ const Adduser = (props) => {
     
     
     return (
-        
+        <div>
+        <ErrorModal title={"An error occurred"} message={"something went wrong"} />
         <Card className={classes.input}>
         <form onSubmit={handleOnSubmit}>
             <label>Username</label>
@@ -57,7 +59,7 @@ const Adduser = (props) => {
         </form>
         
         </Card>
-        
+        </div>
            
     )
 }
