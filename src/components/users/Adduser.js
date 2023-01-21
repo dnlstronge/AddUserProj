@@ -22,7 +22,7 @@ const Adduser = (props) => {
         props.onAddUser(username, age)
         setUsername('');
         setAge('');
-        console.log("Mon the gunners!")
+        
 
     }
     const handleUsername = (e) => {
