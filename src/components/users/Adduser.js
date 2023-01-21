@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Card from '../UI/Card'
 import classes from './Adduser.module.css'
 import Button from '../UI/Button'
-
+import UserList from './UserList'
 
 
 
@@ -21,6 +21,7 @@ const Adduser = (props) => {
         }
         setUsername('');
         setAge('');
+        console.log("Mon the gunners!")
     }
     const handleUsername = (e) => {
         setUsername(e.target.value)
@@ -31,6 +32,7 @@ const Adduser = (props) => {
     
     
     return (
+        <>
         <Card className={classes.input}>
         <form onSubmit={handleOnSubmit}>
             <label>Username</label>
@@ -51,7 +53,14 @@ const Adduser = (props) => {
             />
             <Button type="submit">Add user</Button>
         </form>
+        
         </Card>
+        <Card>
+            { username && age &&
+            <UserList users={}/>
+           }
+        </Card>
+        </>
     )
 }
 
