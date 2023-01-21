@@ -55,11 +55,11 @@ const Adduser = (props) => {
         </form>
         
         </Card>
-        <Card>
+        
             { username && age &&
             <UserList users={}/>
            }
-        </Card>
+        
         </>
     )
 }
