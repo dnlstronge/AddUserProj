@@ -16,13 +16,13 @@ const Adduser = (props) => {
     const handleOnSubmit = (e) => {
         e.preventDefault()
         if (username.trim().length === 0 || age.trim().length === 0) {
-            setError({
+           return setError({
                 title: 'Invalid input',
                 message: 'Please enter a valid username and age '
             })
         }
         if (+age < 1) {
-            setError({
+            return setError({
                 title: 'Invalid age',
                 message: 'Please enter a number greater than 0 '
             })
