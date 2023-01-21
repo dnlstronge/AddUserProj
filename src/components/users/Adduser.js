@@ -32,7 +32,7 @@ const Adduser = (props) => {
     
     
     return (
-        <>
+        
         <Card className={classes.input}>
         <form onSubmit={handleOnSubmit}>
             <label>Username</label>
@@ -56,11 +56,7 @@ const Adduser = (props) => {
         
         </Card>
         
-            { username && age &&
-            <UserList users={}/>
-           }
-        
-        </>
+           
     )
 }
 
