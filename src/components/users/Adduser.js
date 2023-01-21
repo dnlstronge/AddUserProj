@@ -13,11 +13,11 @@ const Adduser = (props) => {
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
-        if (username.length > 0 && age > 0) {
-            console.log(age, username)
+        if (username.trim().length === 0 || age.trim().length === 0) {
+            return;
         }
-        else {
-            alert("Error: invalid data submitted")
+        if (+age < 1) {
+            return;
         }
         setUsername('');
         setAge('');
