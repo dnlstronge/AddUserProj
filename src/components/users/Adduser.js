@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Card from '../UI/Card'
 import classes from './Adduser.module.css'
 import Button from '../UI/Button'
@@ -10,6 +10,10 @@ import Wrapper from '../helpers/Wrapper'
 
 
 const Adduser = (props) => {
+
+    const nameInputRef = useRef()
+    const ageInputRef = useRef()
+
     const [username, setUsername] = useState('')
     const [age, setAge] = useState('')
     const [error, setError] = useState()
@@ -63,6 +67,7 @@ const Adduser = (props) => {
                     type="text" 
                     onChange={handleUsername}
                     value={username}
+                    ref={nameInputRef}
                 />
                 <label>Age (years)</label>
                 <input 
@@ -71,6 +76,7 @@ const Adduser = (props) => {
                     type="number" 
                     onChange={handleAge}
                     value={age}
+                    ref={ageInputRef}
                 />
                 <Button type="submit">Add user</Button>
             </form>
