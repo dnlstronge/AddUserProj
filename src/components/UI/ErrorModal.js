@@ -31,6 +31,12 @@ const ErrorModal = (props) => {
     <>
         {ReactDOM.createPortal(<Backdrop closeError={props.closeError}/>, 
                                 document.getElementById("backdrop-root"))}
+        {ReactDOM.createPortal(<ModalOverlay 
+                                closeError={props.closeError} 
+                                title={props.title}
+                                message={props.message}
+                                />, 
+                                document.getElementById("overlay-root") )}
     </>)
 } 
 
