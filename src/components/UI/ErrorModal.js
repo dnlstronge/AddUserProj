@@ -3,12 +3,12 @@ import Button from "./Button"
 import classes from "./ErrorModal.module.css"
 
 
-const ErrorModal = (props) => {
+const Backdrop = (props) => {
+    return <div className={classes.backdrop} onClick={props.closeError}></div>
+};
 
-
+const ModalOverlay = (props) => {
     return (
-    <>
-    <div className={classes.backdrop} onClick={props.closeError}>
         <Card className={classes.modal}>
             <header className={classes.header}>
                 <h2>{props.title}</h2>
@@ -20,7 +20,15 @@ const ErrorModal = (props) => {
                 <Button onClick={props.closeError}>Okay</Button>
             </footer>
         </Card>
-    </div>
+    )
+}
+
+const ErrorModal = (props) => {
+
+
+    return (
+    <>
+        {}
     </>)
 } 
 
