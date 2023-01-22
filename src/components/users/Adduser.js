@@ -4,6 +4,7 @@ import Card from '../UI/Card'
 import classes from './Adduser.module.css'
 import Button from '../UI/Button'
 import ErrorModal from '../UI/ErrorModal'
+import Wrapper from '../helpers/Wrapper'
 
 
 
@@ -46,31 +47,36 @@ const Adduser = (props) => {
 
     
     return (
-        <div>
-        {error && <ErrorModal closeError={errorHandler} title={error.title} message={error.message} />}
-        <Card className={classes.input}>
-        <form onSubmit={handleOnSubmit}>
-            <label>Username</label>
-            <input 
-                htmlFor="username" 
-                id="username" 
-                type="text" 
-                onChange={handleUsername}
-                value={username}
-            />
-            <label>Age (years)</label>
-            <input 
-                htmlFor="age" 
-                id="age" 
-                type="number" 
-                onChange={handleAge}
-                value={age}
-            />
-            <Button type="submit">Add user</Button>
-        </form>
+        <Wrapper>
+        {error && 
+        <ErrorModal 
+            closeError={errorHandler} 
+            title={error.title} 
+            message={error.message} />}
+
+         <Card className={classes.input}>
+            <form onSubmit={handleOnSubmit}>
+                <label>Username</label>
+                <input 
+                    htmlFor="username" 
+                    id="username" 
+                    type="text" 
+                    onChange={handleUsername}
+                    value={username}
+                />
+                <label>Age (years)</label>
+                <input 
+                    htmlFor="age" 
+                    id="age" 
+                    type="number" 
+                    onChange={handleAge}
+                    value={age}
+                />
+                <Button type="submit">Add user</Button>
+            </form>
         
-        </Card>
-        </div>
+         </Card>
+        </Wrapper>
            
     )
 }
