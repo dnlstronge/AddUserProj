@@ -7,7 +7,7 @@ const ErrorModal = (props) => {
 
 
     return (
-    <div>
+    <>
     <div className={classes.backdrop} onClick={props.closeError}>
         <Card className={classes.modal}>
             <header className={classes.header}>
@@ -21,7 +21,7 @@ const ErrorModal = (props) => {
             </footer>
         </Card>
     </div>
-    </div>)
+    </>)
 } 
 
 export default ErrorModal;
