@@ -14,36 +14,31 @@ const Adduser = (props) => {
     const nameInputRef = useRef()
     const ageInputRef = useRef()
 
-    const [username, setUsername] = useState('')
-    const [age, setAge] = useState('')
+
     const [error, setError] = useState()
     
     const handleOnSubmit = (e) => {
         e.preventDefault()
-        if (username.trim().length === 0 || age.trim().length === 0) {
+        const enteredName = nameInputRef.current.value
+        const enteredAge = ageInputRef.current.value
+        if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
            return setError({
                 title: 'Invalid input',
                 message: 'Please enter a valid username and age '
             })
         }
-        if (+age < 1) {
+        if (+enteredAge < 1) {
             return setError({
                 title: 'Invalid age',
                 message: 'Please enter a number greater than 0 '
             })
         }
-        props.onAddUser(username, age)
-        setUsername('');
-        setAge('');
+        props.onAddUser(enteredName, enteredAge)
+     
         
 
     }
-    const handleUsername = (e) => {
-        setUsername(e.target.value)
-    }
-    const handleAge = (e) => {
-        setAge(e.target.value)
-    }
+  
     
     const errorHandler = () => {
         setError(null)
@@ -65,8 +60,6 @@ const Adduser = (props) => {
                     htmlFor="username" 
                     id="username" 
                     type="text" 
-                    onChange={handleUsername}
-                    value={username}
                     ref={nameInputRef}
                 />
                 <label>Age (years)</label>
@@ -74,8 +67,6 @@ const Adduser = (props) => {
                     htmlFor="age" 
                     id="age" 
                     type="number" 
-                    onChange={handleAge}
-                    value={age}
                     ref={ageInputRef}
                 />
                 <Button type="submit">Add user</Button>
