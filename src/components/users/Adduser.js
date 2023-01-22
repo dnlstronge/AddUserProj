@@ -52,19 +52,19 @@ const Adduser = (props) => {
         <form onSubmit={handleOnSubmit}>
             <label>Username</label>
             <input 
-            htmlFor="username" 
-            id="username" 
-            type="text" 
-            onChange={handleUsername}
-            value={username}
+                htmlFor="username" 
+                id="username" 
+                type="text" 
+                onChange={handleUsername}
+                value={username}
             />
             <label>Age (years)</label>
             <input 
-            htmlFor="age" 
-            id="age" 
-            type="number" 
-            onChange={handleAge}
-            value={age}
+                htmlFor="age" 
+                id="age" 
+                type="number" 
+                onChange={handleAge}
+                value={age}
             />
             <Button type="submit">Add user</Button>
         </form>
